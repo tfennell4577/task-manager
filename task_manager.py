@@ -27,6 +27,12 @@ def complete_task(task_id):
             task['completed'] = True
     return
 
+def delete_task(task_id):
+    for task in tasks:
+        if task['id'] == task_id:
+            tasks.remove(task)
+            return
+
 add_task("Learn Python")
 add_task("Learn Git")
 add_task("Build FastAPI API")
