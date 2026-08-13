@@ -6,7 +6,7 @@ def add_task(title):
 
     task['id'] = id
     task['title'] = title
-    task['completed'] = False
+    task['completed'] = True
 
     tasks.append(task)
 
