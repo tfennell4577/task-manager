@@ -1,12 +1,11 @@
 tasks = []
 
-def add_task(title):
-    task = {}
-    id = len(tasks) + 1
-
-    task['id'] = id
-    task['title'] = title
-    task['completed'] = True
+def add_task(title: str):
+    task = {
+    "id": len(tasks) + 1,
+    "title": title,
+    "completed": False
+    }
 
     tasks.append(task)
 
@@ -15,19 +14,19 @@ def add_task(title):
 def get_tasks():
     return tasks
 
-def find_task(task_id):
+def find_task(task_id: int):
     for task in tasks:
         if task['id'] == task_id:
             return task
     return None
 
-def complete_task(task_id):
+def complete_task(task_id: int):
     for task in tasks:
         if task['id'] == task_id:
             task['completed'] = True
     return
 
-def delete_task(task_id):
+def delete_task(task_id: int):
     for task in tasks:
         if task['id'] == task_id:
             tasks.remove(task)
